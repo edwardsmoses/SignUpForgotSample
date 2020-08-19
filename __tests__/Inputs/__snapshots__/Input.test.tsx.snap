@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should match snapshot 1`] = `
+<View>
+  <TextInput
+    allowFontScaling={true}
+    autoCapitalize="none"
+    autoFocus={true}
+    placeholder="Password"
+    rejectResponderTermination={true}
+    secureTextEntry={true}
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#6d6d6d",
+        "borderRadius": 5,
+        "borderWidth": 1,
+        "marginVertical": 10,
+      }
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+</View>
+`;

@@ -1,17 +1,20 @@
 import { render, cleanup } from 'react-native-testing-library';
+
 import React from 'react';
-import Button from '../../src/components/Buttons/Button';
+import { Text } from 'react-native';
+
+import RoundedButton from '../../src/components/Buttons/RoundedButton';
 
 afterEach(cleanup);
 
-describe('<Button />', () => {
+describe('<RoundedButton />', () => {
     it('should match snapshot', () => {
         const rendered = render(
-            <Button
+            <RoundedButton
                 onPress={() => {
                     return {};
                 }}
-                title="Sign Up"
+                children={<Text>{'-'}</Text>}
             />,
         ).toJSON();
 
