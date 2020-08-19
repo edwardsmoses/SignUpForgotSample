@@ -7,7 +7,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { AppRoutes } from './src/routes/';
+import { AppRoutes } from './src/routes/index';
 import SignUpScreen from './src/screens/SignUp/SignUp';
 import SignUpConfirmScreen from './src/screens/SignUp/ConfirmSignUp';
 

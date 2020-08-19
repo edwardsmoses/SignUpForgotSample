@@ -1,4 +1,5 @@
 import React from 'react';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { SafeAreaView, StyleSheet, View, StatusBar, Text } from 'react-native';
@@ -10,7 +11,18 @@ import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import RoundedButton from '../../components/Buttons/RoundedButton';
 
-const SignUpScreen = () => {
+import { AppRoutes } from '../../routes/';
+
+type SignUpScreenParamList = {
+    [AppRoutes.SignUp]: undefined;
+    [AppRoutes.SignUpConfirm]: undefined;
+};
+
+export interface SignUpScreenProps {
+    navigation: StackNavigationProp<SignUpScreenParamList, AppRoutes.SignUp>;
+}
+
+const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
     return (
         <React.Fragment>
             <StatusBar barStyle="dark-content" />
@@ -41,11 +53,13 @@ const SignUpScreen = () => {
                         <View style={styles.roundedButtonContainer}>
                             <RoundedButton
                                 onPress={() => {
-                                    return {};
+                                    console.log('Pressed', navigation);
+                                    navigation.navigate(
+                                        AppRoutes.SignUpConfirm,
+                                    );
                                 }}
                                 children={
                                     <Text style={styles.buttonIconStyle}>
-                                        {' '}
                                         {'>'}
                                     </Text>
                                 }

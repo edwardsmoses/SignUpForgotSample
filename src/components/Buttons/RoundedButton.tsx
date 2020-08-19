@@ -4,7 +4,7 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import * as Colors from '../../styles/Color';
 
 interface RoundedButtonProps {
-    onPress: () => {};
+    onPress(): void;
     children: React.ReactNode;
     size?: number;
 }
