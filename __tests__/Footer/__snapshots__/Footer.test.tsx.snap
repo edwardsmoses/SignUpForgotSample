@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignContent": "center",
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "borderTopColor": "#53a1e8",
+        "borderTopWidth": 0.5,
+        "marginBottom": 15,
+        "marginTop": 10,
+      }
+    }
+  />
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignContent": "center",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#53a1e8",
+          "fontSize": 20,
+          "textAlign": "center",
+        }
+      }
+    >
+      Already have an account?
+    </Text>
+  </View>
+</View>
+`;
