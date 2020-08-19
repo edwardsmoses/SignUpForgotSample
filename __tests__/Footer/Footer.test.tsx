@@ -17,5 +17,4 @@ describe('<Footer />', () => {
 
         expect(rendered).toMatchSnapshot();
     });
-
 });

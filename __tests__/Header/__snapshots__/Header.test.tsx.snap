@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignContent": "center",
+      "justifyContent": "center",
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#53a1e8",
+        "fontSize": 25,
+        "fontWeight": "600",
+        "textAlign": "center",
+      }
+    }
+  >
+    Finish Signing Up
+  </Text>
+</View>
+`;

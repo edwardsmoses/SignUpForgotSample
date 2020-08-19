@@ -9,82 +9,82 @@
  */
 
 import React from 'react';
-import {
-    SafeAreaView,
-    StyleSheet,
-    ScrollView,
-    View,
-    StatusBar,
-} from 'react-native';
+import { SafeAreaView, StyleSheet, View, StatusBar, Text } from 'react-native';
 
-import { Header, Colors } from 'react-native/Libraries/NewAppScreen';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 import Button from './src/components/Buttons/Button';
 import Footer from './src/components/Footer/Footer';
+import Header from './src/components/Header/Header';
+
+import * as AppColors from './src/styles/Color';
 
 const App = () => {
     return (
         <>
             <StatusBar barStyle="dark-content" />
-            <SafeAreaView>
-                <ScrollView
-                    contentInsetAdjustmentBehavior="automatic"
-                    style={styles.scrollView}>
-                    <Header />
-                    <View style={styles.body}>
-                        <View style={styles.sectionContainer}>
+            <SafeAreaView style={styles.safeAreaView}>
+                <View style={styles.sectionContainer}>
+                    <View style={styles.headerContainer}>
+                        <Header title="Finish Signing Up" />
+
+                        <Text style={styles.termsStyle}>
+                            By tapping Sign Up, you agree to our{' '}
+                            <Text style={styles.linkTextStyle}>
+                                Terms & Conditions
+                            </Text>{' '}
+                            and{' '}
+                            <Text style={styles.linkTextStyle}>
+                                Privacy Policy
+                            </Text>
+                            .
+                        </Text>
+
+                        <View style={styles.buttonContainerStyle}>
                             <Button
                                 onPress={() => {
                                     return {};
                                 }}
                                 title="Continue"
                             />
-                            <Footer />
                         </View>
                     </View>
-                </ScrollView>
+                    <Footer />
+                </View>
             </SafeAreaView>
         </>
     );
 };
 
 const styles = StyleSheet.create({
-    scrollView: {
-        backgroundColor: Colors.lighter,
-    },
-    engine: {
-        position: 'absolute',
-        right: 0,
-    },
-    body: {
-        backgroundColor: Colors.white,
+    safeAreaView: {
+        flex: 1,
+        flexDirection: 'column',
     },
     sectionContainer: {
-        marginTop: 32,
-        paddingHorizontal: 24,
-        paddingBottom: 70,
+        backgroundColor: Colors.white,
+        justifyContent: 'space-between',
+        alignContent: 'center',
+        paddingHorizontal: 20,
+        paddingBottom: 40,
+        flex: 1,
+        flexDirection: 'column',
     },
-    sectionTitle: {
-        fontSize: 24,
-        fontWeight: '600',
-        color: Colors.black,
+    headerContainer: {
+        marginTop: 30,
     },
-    sectionDescription: {
-        marginTop: 8,
+    buttonContainerStyle: {
+        alignSelf: 'center',
+    },
+    termsStyle: {
+        color: AppColors.Grey,
         fontSize: 18,
-        fontWeight: '400',
-        color: Colors.dark,
+        textAlign: 'center',
+        marginVertical: 10,
     },
-    highlight: {
-        fontWeight: '700',
-    },
-    footer: {
-        color: Colors.dark,
-        fontSize: 12,
-        fontWeight: '600',
-        padding: 4,
-        paddingRight: 12,
-        textAlign: 'right',
+    linkTextStyle: {
+        color: AppColors.Blue,
+        marginHorizontal: 5,
     },
 });
 

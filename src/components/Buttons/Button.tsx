@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 
 import * as Colors from '../../styles/Color';
 
@@ -17,17 +17,23 @@ const Button: React.FC<ButtonProps> = ({
     width = 300,
 }) => {
     return (
-        <TouchableOpacity
-            onPress={onPress}
-            style={[{ height: height, width: width }, styles.buttonStyle]}>
-            <Text style={styles.textStyle}>{title}</Text>
-        </TouchableOpacity>
+        <View style={styles.containerStyle}>
+            <TouchableOpacity
+                onPress={onPress}
+                style={[{ height: height, width: width }, styles.buttonStyle]}>
+                <Text style={styles.textStyle}>{title}</Text>
+            </TouchableOpacity>
+        </View>
     );
 };
 
 export default Button;
 
 const styles = StyleSheet.create({
+    containerStyle: {
+        alignContent: 'center',
+        justifyContent: 'center',
+    },
     buttonStyle: {
         backgroundColor: Colors.Blue,
         borderRadius: 15,
