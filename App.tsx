@@ -26,7 +26,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-declare const global: {HermesInternal: null | {}};
+import Button from './src/components/Buttons/Button';
+
+declare const global: { HermesInternal: null | {} };
 
 const App = () => {
   return (
@@ -46,9 +48,14 @@ const App = () => {
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change I'm so confused
-                this screen and then come back to see your edits. This stuff is hardcore
+                Edit <Text style={styles.highlight}>App.tsx</Text> to change
               </Text>
+              <Button
+                onPress={() => {
+                  return {};
+                }}
+                title="Continue"
+              />
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>

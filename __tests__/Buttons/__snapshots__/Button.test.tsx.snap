@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should match snapshot 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignContent": "center",
+      "backgroundColor": "#53a1e8",
+      "borderRadius": 15,
+      "height": 50,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": 300,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 20,
+        "textAlign": "center",
+      }
+    }
+  >
+    Sign Up
+  </Text>
+</View>
+`;
