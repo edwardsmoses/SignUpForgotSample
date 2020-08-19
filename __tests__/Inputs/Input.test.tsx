@@ -1,17 +1,17 @@
 import { render, cleanup } from 'react-native-testing-library';
 import React from 'react';
-import Button from '../../src/components/Buttons/Button';
+import Input from '../../src/components/Inputs/Input';
 
 afterEach(cleanup);
 
-describe('<Button />', () => {
+describe('<Input />', () => {
     it('should match snapshot', () => {
         const rendered = render(
-            <Button
-                onPress={() => {
-                    return {};
-                }}
-                title="Sign Up"
+            <Input
+                placeholder="Password"
+                value=""
+                autoFocus={true}
+                isPasswordEntry={true}
             />,
         ).toJSON();
 
